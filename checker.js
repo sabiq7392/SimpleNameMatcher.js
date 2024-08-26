@@ -1,13 +1,16 @@
-const { SimpleNameMatcher } = require("../SimpleNameMatcher");
+// @ts-check
+
+const { SimpleNameMatcher } = require("./SimpleNameMatcher");
+
 
 /**
- * @param {import("..").ICase[]} cases 
+ * @param {import(".").ICase[]} cases 
  * @returns 
  */
 function checker(cases) {
   const matcher = new SimpleNameMatcher();
   
-  /** @type {ICaseResult[]} */
+  /** @type {import(".").ICaseResult[]} */
   const result = [];
   cases.forEach((test, index) => {
     try {
